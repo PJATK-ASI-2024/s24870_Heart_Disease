@@ -1,0 +1,19 @@
+[2024-11-21T00:31:40.988+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-21T00:31:41.000+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: process_heart_disease_data.download_data manual__2024-11-21T00:31:39.454389+00:00 [queued]>
+[2024-11-21T00:31:41.005+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: process_heart_disease_data.download_data manual__2024-11-21T00:31:39.454389+00:00 [queued]>
+[2024-11-21T00:31:41.006+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-21T00:31:41.015+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): download_data> on 2024-11-21 00:31:39.454389+00:00
+[2024-11-21T00:31:41.023+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=5378) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-11-21T00:31:41.022+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'process_heart_disease_data', 'download_data', 'manual__2024-11-21T00:31:39.454389+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/dag1.py', '--cfg-path', '/tmp/tmpzp990c1d']
+[2024-11-21T00:31:41.024+0000] {standard_task_runner.py:72} INFO - Started process 5391 to run task
+[2024-11-21T00:31:41.024+0000] {standard_task_runner.py:105} INFO - Job 77: Subtask download_data
+[2024-11-21T00:31:41.058+0000] {task_command.py:467} INFO - Running <TaskInstance: process_heart_disease_data.download_data manual__2024-11-21T00:31:39.454389+00:00 [running]> on host 2276f79c0942
+[2024-11-21T00:31:41.107+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='process_heart_disease_data' AIRFLOW_CTX_TASK_ID='download_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-21T00:31:39.454389+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-21T00:31:39.454389+00:00'
+[2024-11-21T00:31:41.108+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-21T00:31:41.149+0000] {logging_mixin.py:190} INFO - Plik został pobrany i zapisany jako 'data.csv'
+[2024-11-21T00:31:41.149+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-21T00:31:41.155+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-21T00:31:41.155+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=process_heart_disease_data, task_id=download_data, run_id=manual__2024-11-21T00:31:39.454389+00:00, execution_date=20241121T003139, start_date=20241121T003141, end_date=20241121T003141
+[2024-11-21T00:31:41.198+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-21T00:31:41.214+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-21T00:31:41.216+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
